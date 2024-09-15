@@ -4,7 +4,7 @@ For the realtime system, we can consider 2 approachs: polling (short and long po
 
 ## **Solution 1:** the simplest one
 
-![Allin1 components](https://acbc.jpg)
+![Allin1 components](assets/elsa_quiz-SimpleHLA.jpg)
 In this architect, the system will follow a typical client-server model, with WebSocket or API polling for enabling real-time communication.
 
 - **Web / Mobiles**: used by participant / admin to create quiz session, join quiz session, submit answers and view the leading board. Web / Mobiles will send websocket / API Rest to Websocket Server and Logic server to submit anwsers and get results (polling if api-rest)
@@ -24,7 +24,7 @@ This approach is simple and maybe suitable for the beginning or POC of systems. 
 - [ ] (optional) Redis or Memcached: actually DB is enough if design as clusters. Caching will be use as buffers for super fast saving and retrieving data because it live in memory. But caching maybe have problems of invalidating.
 - [ ] (optional) DB Proxy or Data Gateway for monitor / replica / ...
 - [ ] Log Server and ELK Stack: for see the logs (exceptions, error, assertion) and monitor health (ready and lively of backbone apps, logic app)
-  ![Atomic Components](https://32323)
+  ![Atomic Components](assets/elsa_quiz-AdvanceHLA.jpg)
 
 In this architect, **the ideas are:**
 - Only focus on logic app (backbone app are mongodb/postgress, kafka/redis pubsub, socket.io, ELK/Grafana, apigateway / kong, cognitor/keycloak)

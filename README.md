@@ -1,9 +1,9 @@
 # Quizshoot - Kahoot Clone
 
 Below are the features list of **QuizShoot**. Please to go for more detail on requirement and technical design
-- Requirements
-- System Design
-- Detail Design
+- [System Design](docs/High_level_design.md) 
+- [US4: user paticipants requirements](docs/US4-Quiz_participant/Requirements.md)
+- [US4: user paticipants flows](docs/US4-Quiz_participant/Flows.md)
 
 ### 1. **User Authentication and Profiles**
 
