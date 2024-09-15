@@ -1,0 +1,21 @@
+title Join the session and view participants
+
+participant User
+participant Webapp/Mobileapp
+participant QuizSession Service
+participant Database/Redis
+participant Websocket Server
+
+User->Webapp/Mobileapp:1.1 User go to url/qrlink and enter code in form
+Webapp/Mobileapp-> QuizSession Service:1.2. Request to join session\nPost: /session/ASDF1234\nParams: code
+QuizSession Service->Database/Redis:1.3. Store user info to session map
+Database/Redis->Websocket Server:1.4. Broadcast reatime dashboard\n- How many user\n- Count down
+QuizSession Service--> Webapp/Mobileapp:1.2'.Return session_id\n(metadata of session: how many questions, duration, ...)
+Webapp/Mobileapp-->User: 1.1'. Redirect user to quizsession room
+
+par Realtime Communication
+Webapp/Mobileapp->Websocket Server: 0. Initiate realtime connection.
+Websocket Server<-->Webapp/Mobileapp:0'. 2 way stateful communication\nReturn: number of participants and detail of each users (name/avatar)
+end
+
+

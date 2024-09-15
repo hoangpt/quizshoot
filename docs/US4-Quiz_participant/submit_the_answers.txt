@@ -1,0 +1,20 @@
+title Submit the answers and view results
+
+participant User
+participant Webapp/Mobileapp
+participant QuizSession Service
+participant DB/Redis
+participant Socket.io
+
+User->Webapp/Mobileapp: 1.User choose anwsers and submit form
+Webapp/Mobileapp-->QuizSession Service:2. Submit API\n- Post /session/ABC123/answers\n- Payload: answers
+
+QuizSession Service->QuizSession Service: 3. Compare answer with solution in DB/DB/Redis.
+QuizSession Service->QuizSession Service:4. Calculate score based on:\n- Correctness\n- Time answers
+QuizSession Service->DB/Redis: 5. Store and sort scores of users in session_map
+QuizSession Service-->Webapp/Mobileapp: 2'. Return ok
+
+par Realtime Communication
+DB/Redis->Socket.io: 6. Publish for all users scores.
+Socket.io-->Webapp/Mobileapp:6'. Return data\n- Current user score\n- Leader boards
+end

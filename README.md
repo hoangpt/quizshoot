@@ -2,6 +2,7 @@
 
 Below are the features list of **QuizShoot**. Please to go for more detail on requirement and technical design
 - [System Design](docs/High_level_design.md) 
+- [Optimization](docs/Consideration.md)
 - [US4: user paticipants requirements](docs/US4-Quiz_participant/Requirements.md)
 - [US4: user paticipants flows](docs/US4-Quiz_participant/Flows.md)
 
