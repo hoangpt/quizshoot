@@ -6,6 +6,9 @@ Below are the features list of **QuizShoot**. Please to go for more detail on re
 - [US4: user paticipants requirements](docs/US4-Quiz_participant/Requirements.md)
 - [US4: user paticipants flows](docs/US4-Quiz_participant/Flows.md)
 
+## Video explain
+[Video explain detail](https://drive.google.com/file/d/1PGS9aj3DvlF8ZK3fnN-EhPxD-YjgVvNu/view?usp=sharing)
+
 ### 1. **User Authentication and Profiles**
 
 -   **User Registration/Login**: Enable users to sign up or log in using email, social media, or third-party authentication services.
