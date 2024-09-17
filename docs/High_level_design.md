@@ -2,7 +2,7 @@
 
 For the realtime system, we can consider 2 approachs: polling (short and long polling) and websocket. And we can consider KISS principle when design this system.
 
-## **Solution 1:** the simplest one
+## **Solution 1:** all-in-1
 
 ![Allin1 components](assets/elsa_quiz-SimpleHLA.jpg)
 
@@ -47,6 +47,12 @@ In this architect, **the ideas are:**
 |Message Broker|Enable realtime communication between services / backbone app| Kafka (reatime broadcast)|
 |Monitoring/Logging|Tracks the system performance and logs errors for observability.|ELK / Grafana (Centralized log system / Beat clients)|
 
+## **Solution 3:** Cloud
 
+![Allin1 components](assets/cloud_kahoot.jpg)
+
+In this architect, we no need to build websocket server or DB but instead, we use some managed services (firebase realtime DB.
+The idea is the same, but for backbone app, make use of managed SaaS. Only focus on building logic app, event hosting for webapp also can use firebasehosting.
+For API Gateway and Server, use GCP Gateway and EKS, so that the network connection between firebase and logic app are the fastest.
 
 
