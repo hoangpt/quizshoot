@@ -7,7 +7,8 @@ Below are the features list of **QuizShoot**. Please to go for more detail on re
 - [US4: user paticipants flows](docs/US4-Quiz_participant/Flows.md)
 
 ## Video explain
-[Video explain detail](https://drive.google.com/file/d/1y-yWLZqqkSN834EpjVCAnSk0HTsA6VjX/view?usp=sharing)
+[1. Video about on-premise infra](https://drive.google.com/file/d/1HZNJOEs2Pht5E01OMk4QHK4BKheM1TnC/view?usp=drive_link)
+[1. Video using cloud and managed services](https://drive.google.com/file/d/1hBVb58V0VrddneP03qMAm5nnIH7Pi0-G/view?usp=sharing)
 
 ### 1. **User Authentication and Profiles**
 
